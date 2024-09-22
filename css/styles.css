@@ -1,0 +1,407 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f3e6;
+  color: #4a4a4a;
+}
+
+header {
+  position: sticky;
+  background-color: #f9f3e6;
+  padding: 1rem 0;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+  font-size: 1.3rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #4a4a4a;
+}
+section {
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  padding: 2rem;
+}
+
+.profile-image {
+  width: 600px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20rem;
+}
+
+.intro-text {
+  position: absolute;
+  margin-left: 500px;
+}
+
+.intro-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+footer {
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 2rem;
+  }
+  .profile-image {
+    width: 600px;
+    height: auto;
+    margin-right: 0;
+  }
+  .intro-text {
+    position: relative;
+    padding: 1rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul li {
+    margin: 0 1rem;
+    font-size: 0.8rem;
+  }
+  .profile-image {
+    width: 400px;
+  }
+  .intro-text {
+    font-size: 1.5rem;
+  }
+  footer {
+    font-size: 1rem;
+  }
+  .intro-text h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 416px) {
+  .profile-image {
+    width: 300px;
+  }
+}
+
+/*sobre mi */
+
+.sobre-mi-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4rem 2rem;
+  height: auto;
+}
+
+.sobre-mi-texto,
+.formacion {
+  width: 45%;
+}
+
+.sobre-mi-texto h2,
+.formacion h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.sobre-mi-texto p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.formacion ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.formacion li {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.formacion li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #4a4a4a;
+}
+
+@media (max-width: 900px) {
+  .sobre-mi-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sobre-mi-texto,
+  .formacion {
+    width: 65%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre-mi-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobre-mi-texto,
+  .formacion {
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+
+  .sobre-mi-texto h2,
+  .formacion h2 {
+    font-size: 2rem;
+  }
+
+  .sobre-mi-texto p,
+  .formacion li {
+    font-size: 1rem;
+  }
+}
+
+/* Skills */
+.skills-container {
+  flex-direction: column;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.skills-container h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.skills-icons img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skills-icons img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .skills-container h2 {
+    font-size: 2.5rem;
+  }
+
+  .skills-icons {
+    gap: 2rem;
+  }
+
+  .skills-icons img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container h2 {
+    font-size: 2rem;
+  }
+
+  .skills-icons {
+    gap: 1.5rem;
+  }
+
+  .skills-icons img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Experiencia */
+.experiencia-container {
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experiencia-container h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.experiencia-container p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.btn-descargar {
+  display: inline-block;
+  background-color: #4a4a4a;
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-descargar:hover {
+  background-color: #333333;
+}
+
+@media (max-width: 768px) {
+  .experiencia-container h2 {
+    font-size: 2.5rem;
+  }
+
+  .experiencia-container p {
+    font-size: 1rem;
+  }
+
+  .btn-descargar {
+    font-size: 1rem;
+    padding: 0.7rem 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experiencia-container h2 {
+    font-size: 2rem;
+  }
+
+  .experiencia-container p {
+    font-size: 0.9rem;
+  }
+
+  .btn-descargar {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.1rem;
+  }
+}
+
+/* Contacto */
+.contacto-container {
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contacto-container h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.contacto-form {
+  width: 100%;
+  background-color: #5a5a5a;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 95%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.btn-enviar {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #4a4a4a;
+}
+
+@media (max-width: 768px) {
+  .contacto-container h2 {
+    font-size: 2.5rem;
+  }
+
+  .contacto-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacto-container h2 {
+    font-size: 2rem;
+  }
+
+  .contacto-form {
+    padding: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .btn-enviar {
+    font-size: 0.9rem;
+  }
+}
